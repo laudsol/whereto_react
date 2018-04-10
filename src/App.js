@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FbLoginBtn from './components/FbLogin';
+import CardTable from './components/CardTable'
 import './App.css';
 
 
@@ -7,7 +7,8 @@ class App extends React.Component {
   render(){
       return(
         <div>
-          <FbLoginBtn />
+          Main
+          <CardTable/>
         </div>
       )
   }
