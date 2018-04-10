@@ -1,3 +1,16 @@
+.Card {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 5%;
+}
+
+
 .CardTable {
+  padding: 10px;
+  height: 500px;
+  width: 500px;
   background-color: green;
 }
