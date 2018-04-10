@@ -1,3 +1,10 @@
+.CardTable {
+  padding: 10px;
+  height: 500px;
+  width: 500px;
+  background-color: green;
+}
+
 .Card {
   height: 150px;
   width: 150px;
@@ -7,10 +14,66 @@
   border-radius: 5%;
 }
 
-
-.CardTable {
-  padding: 10px;
-  height: 500px;
-  width: 500px;
-  background-color: green;
+.shapeContainer {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
 }
+
+.diamond {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 20px solid red;
+  position: relative;
+  top: -50px;
+}
+
+.diamond:after {
+  content: '';
+  position: absolute;
+  left: -50px; 
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 20px solid red; 
+}
+
+.bar {
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: red;  
+}
+
+.squiggle {
+  background: blue;
+    width: 50px;
+    height: 75px;
+    position: relative;
+}
+
+.squiggle:before{
+  content: '';
+  background-image: radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 100px, blue 100px);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100px;
+  height: 75px;
+}
+
+.squiggle:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 75px;
+  background: blue;
+  border-radius: 0 0 100% 0 / 0 0 100% 0;
+  top: 100%;
+  left: 0;
+}
+
