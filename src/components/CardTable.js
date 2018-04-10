@@ -6,7 +6,6 @@ class CardTable extends React.Component{
         return (
             <div className="CardTable">
                 <Card/>
-                <Card/>
             </div>
         )
     }    

@@ -23,57 +23,84 @@
 }
 
 .diamond {
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-bottom: 20px solid red;
-  position: relative;
-  top: -50px;
-}
-
-.diamond:after {
-  content: '';
-  position: absolute;
-  left: -50px; 
-  top: 20px;
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-top: 20px solid red; 
+  margin: auto;
+  margin-top: 5px;
+  height: 25px;
+  width: 25px;
+  transform: rotate(45deg);
 }
 
 .bar {
+  margin: auto;
   width: 100px;
-  height: 35px;
+  height: 40px;
   border-radius: 25px;
-  background-color: red;  
 }
 
-.squiggle {
-  background: blue;
-    width: 50px;
-    height: 75px;
-    position: relative;
+.circle {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
-.squiggle:before{
-  content: '';
-  background-image: radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 100px, blue 100px);
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100px;
-  height: 75px;
+.solidRed {
+  background-color: red;
 }
 
-.squiggle:after {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 75px;
-  background: blue;
-  border-radius: 0 0 100% 0 / 0 0 100% 0;
-  top: 100%;
-  left: 0;
+.solidGreen {
+  background-color: green;
+}
+
+.solidPurple {
+  background-color: purple;
+}
+
+.shadedRed {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      red,
+      red 2px,
+      white 2px,
+      white 4px
+    );
+}
+
+.shadedGreen {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      green,
+      green 2px,
+      white 2px,
+      white 4px
+    );
+}
+
+.shadedPurple{
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      purple,
+      purple 2px,
+      white 2px,
+      white 4px
+    );
+}
+
+.clearRed {
+  box-sizing: border-box;
+  border: red solid 2px;
+}
+
+.clearGreen {
+  box-sizing: border-box;
+  border: green solid 2px;
+}
+
+.clearPurple {
+  box-sizing: border-box;
+  border: purple solid 2px;
 }
 

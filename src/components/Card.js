@@ -5,8 +5,9 @@ class Card extends React.Component{
         return (
             <div className="Card">
                 <div className="shapeContainer">
-                    <div className="bar">shape</div>
-                    <div className="squiggle">shape</div>
+                    <div className="circle clearRed"></div>
+                    <div className="bar clearRed"></div>
+                    <div className="diamond clearRed"></div>
                 </div>    
             </div>
         )
