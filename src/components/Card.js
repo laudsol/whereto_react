@@ -1,7 +1,6 @@
 import React from 'react'
 
 class Card extends React.Component{
-    
     classNameBuilder(cardData){
         let shapeColorName = ''
         let colorName = cardData.color.split('')
@@ -30,13 +29,12 @@ class Card extends React.Component{
     }
 
     doSomething(){
-        console.log('clicking here', this.props)
-        // this.props.selectCardForSet
+        console.log(this.props)
     }
 
     render() {
         return (
-            <div className="Card" onClick={this.doSomething()}>
+            <div className="Card" onClick={()=> this.doSomething()}>
                 <div className="shapeContainer">
                     {this.buildCardShapes()}
                 </div>    

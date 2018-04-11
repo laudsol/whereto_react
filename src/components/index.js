@@ -28,7 +28,7 @@ class SetGame extends React.Component{
         let selectedCards = []
 
         while(selectedCards.length < 12){
-            let cardIndex = Math.round(Math.random()*(this.state.cardArr.length)-1)
+            let cardIndex = Math.round(Math.random()*(this.state.cardArr.length-1))
             if(!cardIndexes.includes(cardIndex)){
                 cardIndexes.push(cardIndex)
                 selectedCards.push(this.state.cardArr[cardIndex])
@@ -41,7 +41,7 @@ class SetGame extends React.Component{
         this.setState(previousState)
     }
 
-    selectCardForSet(card){
+    selectCardForSet(){
         // let previousState = this.state
         // previousState.selectedCards.push(card)
         // this.setState(previousState)
