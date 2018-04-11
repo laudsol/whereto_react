@@ -9,7 +9,7 @@ class SetButton extends React.Component{
 
     render() {
         return (
-            <Button>
+            <Button bsStyle="primary" bsSize="large">
                 Set Button
             </Button>
         )
