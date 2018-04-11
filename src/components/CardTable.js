@@ -26,7 +26,7 @@ class CardTable extends React.Component{
         let selectedCards = []
 
         while(selectedCards.length < 12){
-            let cardIndex = Math.round(Math.random()*(this.state.cardArr.length))
+            let cardIndex = Math.round(Math.random()*(this.state.cardArr.length)-1)
             if(!cardIndexes.includes(cardIndex)){
                 cardIndexes.push(cardIndex)
                 selectedCards.push(this.state.cardArr[cardIndex])
@@ -39,21 +39,19 @@ class CardTable extends React.Component{
         this.setState(previousState)
     }
 
+    generateActiveCards(){
+        let cardHolder = []
+
+        this.state.activeCards.forEach(card => {
+            cardHolder.push(<Card cardData={card}/>)
+        })
+        return cardHolder
+    }
 
     render() {
         return (
             <div className="CardTable">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {this.generateActiveCards()}
             </div>
         )
     }    
