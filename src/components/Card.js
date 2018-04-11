@@ -1,6 +1,15 @@
 import React from 'react'
 
 class Card extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {}
+    }
+
+    componentDidMount(){
+        this.setState({cardData: this.props.cardData})
+    }
+
     classNameBuilder(cardData){
         let shapeColorName = ''
         let colorName = cardData.color.split('')
@@ -28,13 +37,13 @@ class Card extends React.Component{
         return shapesArray
     }
 
-    doSomething(){
-        console.log(this.props)
-    }
+    // selectCardForSet(){
+    //     this.props.selectCardForSet(this.state.cardData)
+    // }
 
     render() {
         return (
-            <div className="Card" onClick={()=> this.doSomething()}>
+            <div className="Card" onClick={()=> this.selectCardForSet()}>
                 <div className="shapeContainer">
                     {this.buildCardShapes()}
                 </div>    
