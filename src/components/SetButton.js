@@ -7,9 +7,13 @@ class SetButton extends React.Component{
         this.state = {}
     }
 
+    evaluateSet(){
+        this.props.evaluateSet()
+    }
+
     render() {
         return (
-            <Button bsStyle="primary" bsSize="large">
+            <Button bsStyle="primary" bsSize="large" onClick={()=> this.evaluateSet()}>
                 Set Button
             </Button>
         )
