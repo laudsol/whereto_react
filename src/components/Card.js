@@ -29,9 +29,14 @@ class Card extends React.Component{
         return shapesArray
     }
 
+    doSomething(){
+        console.log('clicking here', this.props)
+        // this.props.selectCardForSet
+    }
+
     render() {
         return (
-            <div className="Card">
+            <div className="Card" onClick={this.doSomething()}>
                 <div className="shapeContainer">
                     {this.buildCardShapes()}
                 </div>    

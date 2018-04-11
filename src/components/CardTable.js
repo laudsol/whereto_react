@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from './Card'
-import cardData from '../assets/cardData'
 
 class CardTable extends React.Component{
 
@@ -8,7 +7,10 @@ class CardTable extends React.Component{
         let cardHolder = []
 
         this.props.activeCards.forEach(card => {
-            cardHolder.push(<Card cardData={card}/>)
+            cardHolder.push(<Card 
+                    cardData={card}
+                    selectCardForSet={this.props.selectCardForSet} 
+                />)
         })
         return cardHolder
     }

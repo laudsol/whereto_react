@@ -8,8 +8,9 @@ class SetGame extends React.Component{
         super(props);
         this.state = {
             cardArr: '',
-            activeCards: [],
-            selectedCardsIndex: []
+            displayedCards: [],
+            allPlayedCardIndexes: [],
+            selectedCards: []
         };
     }
 
@@ -35,9 +36,16 @@ class SetGame extends React.Component{
         }
 
         let previousState = this.state
-        previousState.activeCards = selectedCards
-        previousState.selectedCardsIndex = cardIndexes
+        previousState.displayedCards = selectedCards
+        previousState.allPlayedCardIndexes = cardIndexes
         this.setState(previousState)
+    }
+
+    selectCardForSet(card){
+        // let previousState = this.state
+        // previousState.selectedCards.push(card)
+        // this.setState(previousState)
+        console.log('logging click')
     }
 
     render() {
@@ -45,7 +53,8 @@ class SetGame extends React.Component{
             <div>
                 <SetButton/>
                 <CardTable
-                    activeCards={this.state.activeCards} 
+                    activeCards={this.state.displayedCards}
+                    selectCardForSet={this.selectCardForSet}
                 />
             </div>
         )

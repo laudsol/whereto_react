@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SetGame from './components/index'
 import './App.css';
 
