@@ -42,12 +42,35 @@ class SetGame extends React.Component{
     }
 
     selectCardForSet = (card) => {
-       let previousState = this.state
-       previousState.selectedCards.push(card)
-       this.setState(previousState)
+        let cardCode = Object.keys(card).map(attribute => {
+            if(typeof(card[attribute]) === 'string'){
+                return card[attribute].slice(0,1)
+            } else {
+                return card[attribute]
+            }
+        }).join('')
+
+        card.cardCode = cardCode
+
+        let previousState = this.state
+        let cardAlreadySelected = false
+        
+        previousState.selectedCards.forEach((card, i) => {
+            if(card.cardCode === cardCode){
+                cardAlreadySelected = true
+                previousState.selectedCards.splice(i, 1)
+            }
+        })
+
+        if(!cardAlreadySelected){
+            previousState.selectedCards.push(card)
+        }
+
+        this.setState(previousState)
     }
 
     render() {
+        console.log(this.state.selectedCards)
         return (
             <div>
                 <SetButton/>
