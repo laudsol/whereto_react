@@ -21,9 +21,16 @@ class Card extends React.Component{
         return `${cardData.shape} ${shapeColorName}`
     }
 
-    componentDidMount(){
-        let formattedClassName = this.classNameBuilder(this.props.cardData)
-        console.log('formattedClassName', formattedClassName)
+    buildCardShapes(){
+        let shapesArray = []
+        let cardData = this.props.cardData
+
+        while(shapesArray.length < cardData.number){
+            let formattedClassName = this.classNameBuilder(cardData)
+            let div = <div className={formattedClassName}></div>
+            shapesArray.push(div)
+        }
+        return shapesArray
     }
 
     
@@ -31,9 +38,7 @@ class Card extends React.Component{
         return (
             <div className="Card">
                 <div className="shapeContainer">
-                    <div className="diamond clearRed"></div>
-                    <div className="diamond clearRed"></div>
-                    <div className="diamond clearRed"></div>
+                    {this.buildCardShapes()}
                 </div>    
             </div>
         )
