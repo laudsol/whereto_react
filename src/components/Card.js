@@ -37,9 +37,9 @@ class Card extends React.Component{
         return shapesArray
     }
 
-    // selectCardForSet(){
-    //     this.props.selectCardForSet(this.state.cardData)
-    // }
+    selectCardForSet(){
+        this.props.selectCardForSet(this.state.cardData)
+    }
 
     render() {
         return (

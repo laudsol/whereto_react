@@ -41,8 +41,10 @@ class SetGame extends React.Component{
         this.setState({previousState})
     }
 
-    selectCardForSet(card){
-       console.log('clicked')
+    selectCardForSet = (card) => {
+       let previousState = this.state
+       previousState.selectedCards.push(card)
+       this.setState(previousState)
     }
 
     render() {
