@@ -70,8 +70,6 @@ class SetGame extends React.Component{
     }
 
     evaluateSet = () => {
-        console.log('should evaluate')
-
         let selectedCards = this.state.selectedCards
         let card1 = selectedCards[0]
         let card2 = selectedCards[1]
